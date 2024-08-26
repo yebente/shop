@@ -1,0 +1,532 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Grid Layouts */
+.services-grid, 
+.packages-grid, 
+.testimonials-grid,
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 24px;
+    padding: 24px;
+    text-align: center;
+}
+
+/* Card Layouts */
+.service-card, 
+.package-card, 
+.testimonial-card,
+.blog-card {
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer; /* Add pointer cursor */
+}   
+
+.service-card:hover,
+.package-card:hover, 
+.testimonial-card:hover,
+.blog-card:hover {
+    transform: translateY(-10px); /* Add a slight lift effect on hover */
+}
+
+/* Button Styles */
+.btn {
+    background: #32B34D; /* Stanmobitech Green */
+    color: #fff;
+    padding: 9px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 13px;
+}
+
+.btn:hover {
+    background-color: #28a745;
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background: linear-gradient(45deg, #0074B9, #32B34D); /* Gradient */
+    color: #fff;
+    padding: 12px 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Stay on top */
+    width: 100%;
+}
+
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: beach resort;
+    letter-spacing: 0.1ch;
+}
+
+header nav ul, footer .quick-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+header nav ul li, footer .quick-links li {
+    display: inline;
+    margin-left: 15px;
+}
+
+header nav ul li a, footer .quick-links li a, footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: #f4f4f4;
+    color: #333;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero p {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.hero h1 {
+    font-size: 28px;
+}
+
+.hero .btn {
+    background: #0074B9; /* Stanmobitech Blue */
+    padding: 14px 30px;
+}
+
+.hero .btn:hover {
+    background-color: #005f8c;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #0074B9
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Packages Section Styles */
+.packages {
+    background: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.packages h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #0074B9
+}
+
+.package-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.package-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.package-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #32B34D;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #0074B9
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Blog Section Styles */
+.blog {
+    background: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.blog h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #0074B9
+}
+
+.blog-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Services Content Styles */
+.services-content {
+    padding: 60px 0;
+    text-align: left;
+}
+
+.services-content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-content h2 {
+    margin-top: 40px;
+    color: #333;
+}
+
+.services-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.services-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.services-content ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.services-content .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Packages Content Styles */
+.packages-content {
+    padding: 60px 0;
+    text-align: left;
+}
+
+.packages-content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.packages-content h2 {
+    margin-top: 40px;
+    color: #333;
+}
+
+.packages-content .package {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.packages-content .package h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.packages-content .package p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.packages-content .package ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.packages-content .package ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.packages-content .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Organic Products Content Styles */
+section.organic-products-content {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section.organic-products-content h1 {
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:24px;
+    padding: 24px;
+  }
+
+.product-card {
+    margin-bottom: 50px;
+    background-color: #eeeeee;
+    padding: 24px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: scale-down;
+    
+}
+
+.product-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 20px;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #555;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+/* Blog Content Styles */
+section.blog-content {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section.blog-content h1 {
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post p.date {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+}
+
+.blog-post a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.blog-post a:hover {
+    background-color: #ddd;
+}
+
+/* Contact Form Styles */
+section.contact-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section.contact-form h1 {
+    margin-bottom: 30px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form form button:hover {
+    background-color: #555;
+}
+
+/* Login Styles */
+section.login-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section.login-form h1 {
+    margin-bottom: 30px;
+}
+
+.login-form form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form form button:hover {
+    background-color: #555;
+}
+
+/* Sign Up Form Styles */
+section.signup-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section.signup-form h1 {
+    margin-bottom: 30px;
+}
+
+.signup-form form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup-form form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form form button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .quick-links, footer .social-links {
+    text-align: center;
+}
+
+footer .quick-links a, footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
