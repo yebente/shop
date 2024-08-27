@@ -23,16 +23,34 @@
             </div>
         </header>
          <!-- Sign Up Form -->
-    <section class="signup-form">
-        <div class="container">
-            <h1>Sign Up</h1>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="password" name="password" placeholder="Your Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="login.html">Login</a></p>
+    <section class="content">
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+            
+            <div class="cart-item">
+                <img src="images/farm raised chicken.jpg" alt="Fresh Chicken">
+                <div class="item-details">
+                    <h2>Fresh Chicken</h2>
+                    <p>Total: Ksh. <span id="chicken-total">500</span></p>
+                    <input type="number" id="chicken-quantity" value="1" min="1" onchange="calculateTotal()">
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+    
+            <div class="cart-item">
+                <img src="images/free-range farm eggs.jpg" alt="Farm Eggs">
+                <div class="item-details">
+                    <h2>Farm Eggs</h2>
+                    <p>Total: Ksh. <span id="egg-total">15</span></p>
+                    <input type="number" id="egg-quantity" value="1" min="1" onchange="calculateTotal()">
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+    
+            <div class="cart-summary">
+                <h3>Total: Ksh. <span id="cart-total">515</span></h3>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
         </div>
     </section> 
 
@@ -49,5 +67,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
