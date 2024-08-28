@@ -26,10 +26,16 @@ function addToCart(item) {
     const quantityInput = document.getElementById(item + '-quantity');
     const quantity = parseInt(quantityInput.value);
 
-    // Define prices for items
-    const prices = {
-        chicken: 500,
-        eggs: 15
+    // Define prices and image paths for items
+    const items = {
+        chicken: {
+            price: 500,
+            img: 'images/farm raised chicken.jpg'
+        },
+        eggs: {
+            price: 15,
+            img: 'images/free-range farm eggs.jpg'
+        }
     };
 
     // Check if the item is already in the cart
@@ -39,8 +45,9 @@ function addToCart(item) {
     } else {
         cart.push({
             name: item,
-            price: prices[item],
-            quantity: quantity
+            price: items[item].price,
+            quantity: quantity,
+            img: items[item].img
         });
     }
 
@@ -67,7 +74,7 @@ function displayCart() {
         const cartItemElement = document.createElement('div');
         cartItemElement.className = 'cart-item';
         cartItemElement.innerHTML = `
-            <img src="images/${item.name}.jpg" alt="${item.name}">
+            <img src="${item.img}" alt="${item.name}">
             <div class="item-details">
                 <h2>${item.name.charAt(0).toUpperCase() + item.name.slice(1)}</h2>
                 <p>Price: Ksh. ${item.price}</p>
