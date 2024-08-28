@@ -26,7 +26,6 @@ function addToCart(item) {
     const quantityInput = document.getElementById(item + '-quantity');
     const quantity = parseInt(quantityInput.value);
 
-    // Define prices and image paths for items
     const items = {
         chicken: {
             price: 500,
@@ -38,10 +37,15 @@ function addToCart(item) {
         }
     };
 
-    // Check if the item is already in the cart
+    // Ensure the item exists in the items object
+    if (!items[item]) {
+        console.error(`Item ${item} not found in the items object.`);
+        return;
+    }
+
     const cartItem = cart.find(cartItem => cartItem.name === item);
     if (cartItem) {
-        cartItem.quantity += quantity; // Update quantity if item already exists
+        cartItem.quantity += quantity;
     } else {
         cart.push({
             name: item,
@@ -51,10 +55,7 @@ function addToCart(item) {
         });
     }
 
-    // Save the updated cart to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Notify the user
     alert(item.charAt(0).toUpperCase() + item.slice(1) + " added to cart!");
 }
 

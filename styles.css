@@ -1,205 +1,157 @@
-  /*Global Styles*/
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-/* Header and Footer Styles*/
-header, footer {
-    background: linear-gradient(45deg, #0074B9, #32B34D);
-    color: #fff;
-    padding: 12px 0;
-  }
-  
-  footer {
-    bottom: -10000;
-    position: sticky;
-  }
-  
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-  }
-  
-  header .container, footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .logo a, header nav ul li a, footer .quick-links li a, footer .social-links a {
-    color: #fff;
-    text-decoration: none;
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
 }
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header and Footer Styles */
+header, footer {
+  background: linear-gradient(45deg, #0074B9, #32B34D);
+  color: #fff;
+  padding: 12px 0;
+}
+
+footer {
+  bottom: 0;
+  position: sticky;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+header .container, footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a, header nav ul li a, footer .quick-links li a, footer .social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
 header .logo a {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: beach resort;
-    letter-spacing: 0.1ch;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: beach resort;
+  letter-spacing: 0.1ch;
 }
 
 header, footer {
   font-size: 14px;
 }
+
 header nav ul, footer .quick-links {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: right;
 }
 
 header nav ul li, footer .quick-links li {
-    display: inline;
-    margin-left: 15px;
-    font-size: 13px;
-}
-/*Product Grid Styles*/
-.product-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 24px;
-    padding: 24px;
-  }
-  
-  .product-card {
-    margin-bottom: 50px;
-    background-color: #eeeeee;
-    padding: 24px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  }
-  .product-card img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-    object-fit: scale-down;
-    
-}
-/*Product Card Styles on Hover*/
-.product-card:hover{
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for more depth */
-    transform: translateY(-5px); /* Lift the card slightly to give a 3D effect */
-    border-color: #007bff; /* Change border color on hover */
-    background-color: #f8f9fa; /* Lighten the background color on hover */
-}
-/* Input field styling */
-.product-card input[type="number"] {
-    width: 60px; /* Set a reduced width */
-    height: 30px; /* Set a reduced height */
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-.product-card button:hover {
-    background-color: #218838;
-}
-/* Button styling */
-.product-card button {
-    width: 120px; /* Set a reduced width */
-    height: 35px; /* Set a reduced height */
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-}
-/* Common Form Styles */
-form {
-  padding: 50px 0;
-  text-align: center;
+  display: inline;
+  margin-left: 15px;
+  font-size: 13px;
 }
 
-form input {
-  width: 80%;
-  padding: 10px;
+/* Product Grid Styles */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+}
+
+.product-card {
+  flex: 1 1 calc(50% - 48px);
+  background-color: #eeeeee;
+  padding: 24px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.product-card input[type="number"] {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ccc;
-}
-
-form button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
-/* Container styling to contain and center the login form */
-.form-container {
-  max-width: 400px; /* Fixed maximum width for the form */
-  width: 90%; /* Ensure the form is responsive */
-  margin: 0 auto; /* Center horizontally */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Include padding in the element's width */
-}
-
-/* Styling for text in the forms */
-.form {
   text-align: center;
 }
 
-/* Styling for p elements in the login form */
-.form p{
-  font-size: 12px;
-  color: #555;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: normal;
+.product-card button {
+  width: 120px;
+  height: 35px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.form p a {
-  color: #007bff; /* Blue color for links */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.form p a:hover {
-  text-decoration: underline;
-  color: #0056b3; /* Darker blue on hover */
+.product-card button:hover {
+  background-color: #218838;
 }
 
 /* Cart Container Styles */
 .cart-container {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   margin: 50px auto;
   padding: 20px;
-  box-sizing: border-box;
+  text-align: left;
 }
 
-/* Cart Item Styles */
+.cart-container h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
 .cart-item {
   display: flex;
   align-items: center;
@@ -212,16 +164,15 @@ form button:hover {
 }
 
 .cart-item img {
-  width: 100px; /* Fixed width for product images */
+  width: 100px;
   height: auto;
   margin-right: 20px;
-  border-radius: 5px;
-  object-fit: cover; /* Ensures the image maintains aspect ratio while fitting within the box */
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Item Details Styling */
 .item-details {
-  flex: 1; /* Take up the remaining space */
+  flex: 1;
 }
 
 .item-details h2 {
@@ -236,7 +187,6 @@ form button:hover {
   color: #555;
 }
 
-/* Remove Button Styles */
 .remove-btn {
   background-color: #dc3545;
   color: #fff;
@@ -251,7 +201,6 @@ form button:hover {
   background-color: #c82333;
 }
 
-/* Cart Summary Styles */
 .cart-summary {
   text-align: center;
   margin-top: 30px;
