@@ -77,7 +77,7 @@ header nav ul li, footer .quick-links li {
     background-color: #eeeeee;
     padding: 24px;
     border: 1px solid #ddd;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
   .product-card img {
     width: 100%;
@@ -86,6 +86,13 @@ header nav ul li, footer .quick-links li {
     margin-bottom: 20px;
     object-fit: scale-down;
     
+}
+/*Product Card Styles on Hover*/
+.product-card:hover{
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for more depth */
+    transform: translateY(-5px); /* Lift the card slightly to give a 3D effect */
+    border-color: #007bff; /* Change border color on hover */
+    background-color: #f8f9fa; /* Lighten the background color on hover */
 }
 /* Input field styling */
 .product-card input[type="number"] {
