@@ -33,18 +33,18 @@
                     <img src="images/farm raised chicken.jpg" alt="A selection of fresh, farm-raised chicken cuts">
                     <h2>Fresh Chicken</h2>
                     <p>Quality meat, farm-raised.</p>
-                    <p>Price: Ksh. 500</p>
-                    <input type="number" value="1" min="1">
-                    <button>Add to Cart</button>
+                    <p>Total: Ksh. <span id="chicken-total">500</span></p>
+                    <input type="number" id="chicken-quantity" value="1" min="1" onchange="calculateTotal()">
+                    <button onclick="addToCart('chicken')">Add to Cart</button>
                 </div>
 
                 <div class="product-card">
                     <img src="images/free-range farm eggs.jpg" alt="A crate of fresh, free-range farm eggs">
                     <h2>Farm Eggs</h2>
                     <p>Nutrient-rich, free-range.</p>
-                    <p>Price: Ksh. 15</p>
-                    <input type="number" value="1" min="1">
-                    <button>Add to Cart</button>
+                    <p>Total: Ksh. <span id="egg-total">15</span></p>
+                    <input type="number" id="egg-quantity" value="1" min="1" onchange="calculateTotal()">
+                    <button onclick="addToCart('eggs')">Add to Cart</button>
                 </div>                                             
             </div>
         </div>
@@ -62,5 +62,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -27,24 +27,8 @@
         <div class="cart-container">
             <h1>Shopping Cart</h1>
             
-            <div class="cart-item">
-                <img src="images/farm raised chicken.jpg" alt="Fresh Chicken">
-                <div class="item-details">
-                    <h2>Fresh Chicken</h2>
-                    <p>Total: Ksh. <span id="chicken-total">500</span></p>
-                    <input type="number" id="chicken-quantity" value="1" min="1" onchange="calculateTotal()">
-                </div>
-                <button class="remove-btn">Remove</button>
-            </div>
-    
-            <div class="cart-item">
-                <img src="images/free-range farm eggs.jpg" alt="Farm Eggs">
-                <div class="item-details">
-                    <h2>Farm Eggs</h2>
-                    <p>Total: Ksh. <span id="egg-total">15</span></p>
-                    <input type="number" id="egg-quantity" value="1" min="1" onchange="calculateTotal()">
-                </div>
-                <button class="remove-btn">Remove</button>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically added here -->
             </div>
     
             <div class="cart-summary">
