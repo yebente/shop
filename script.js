@@ -8,7 +8,7 @@ function calculateTotal() {
 
     // Get the quantities from the input fields
     const chickenQuantity = document.getElementById('chicken-quantity').value || 0;
-    const eggQuantity = document.getElementById('egg-quantity').value || 0;
+    const eggQuantity = document.getElementById('eggs-quantity').value || 0;
 
     // Calculate totals for each item
     const chickenTotal = chickenQuantity * chickenPrice;
@@ -16,7 +16,7 @@ function calculateTotal() {
 
     // Update the DOM with calculated totals
     document.getElementById('chicken-total').innerText = chickenTotal;
-    document.getElementById('egg-total').innerText = eggTotal;
+    document.getElementById('eggs-total').innerText = eggTotal;
 
     return { chickenTotal, eggTotal };
 }
@@ -127,3 +127,4 @@ if (document.getElementById('cart-items')) {
 if (document.getElementById('checkout-btn')) {
     document.getElementById('checkout-btn').addEventListener('click', makePayment);
 }
+
