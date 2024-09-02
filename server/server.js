@@ -71,3 +71,40 @@ app.post('/api/mpesa/pay', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
+// src/components/PaymentButton.js
+
+import React from 'react';
+
+const PaymentButton = ({ totalAmount }) => {
+
+    const initiatePayment = async () => {
+        const phoneNumber = prompt("Enter your M-Pesa phone number (e.g., 2547XXXXXXXX):");
+
+        try {
+            const response = await fetch('/api/mpesa/pay', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ phoneNumber, amount: totalAmount }),
+            });
+            const data = await response.json();
+            if (data.ResponseCode === '0') {
+                alert('Payment prompt sent to your phone. Please enter your M-Pesa PIN to complete the transaction.');
+            } else {
+                alert('Payment initiation failed. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while processing the payment.');
+        }
+    };
+
+    return (
+        <button onClick={initiatePayment} className="bg-blue-500 text-white py-2 px-4 rounded">
+            Proceed to Checkout
+        </button>
+    );
+};
+
+export default PaymentButton;
