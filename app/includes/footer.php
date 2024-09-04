@@ -1,1 +1,0 @@
-# Footer include file (alternative structure)

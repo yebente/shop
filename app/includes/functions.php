@@ -1,1 +1,0 @@
-# Common functions file
