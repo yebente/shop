@@ -27,11 +27,13 @@
     <section class="form">
         <div class="form-container">
             <h1>Creat Account</h1>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
+            <form name="formContact" action="connect.php" method="POST">
+                <input type="text" name="firstName" placeholder="Your First Name" required>
+                <input type="text" name="secondName" placeholder="Your Second Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="password" name="password" placeholder="Your Password" required>
                 <input type="password" name="password" placeholder="Confirm Password" required>
+                <input type="number" name="number" placeholder="Phone Number" required>
                 <button type="submit">Sign Up</button>
             </form>
             <p>Already have an account? <a href="login.html">Login</a></p>
