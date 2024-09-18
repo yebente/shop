@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin-bottom: 15px;
   padding: 0;
   background-color: #f8f9fa;
 }
@@ -19,15 +19,21 @@ body {
 }
 
 /* Header and Footer Styles */
-header, footer {
+header {
   background: linear-gradient(45deg, #0074B9, #32B34D);
   color: #fff;
-  padding: 12px 0;
+  padding: 15px 0;
 }
-
 footer {
+  background: linear-gradient(45deg, #0074B9, #32B34D);
+  color: #fff;
+  height: 45px;
+  padding: 50px 0;
+  text-align: center; /* optional */
+  position: absolute;
   bottom: 0;
-  position: sticky;
+  width: 100%;
+  left: 0;
 }
 
 header {

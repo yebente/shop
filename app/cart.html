@@ -5,51 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generation</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html">Generation</a>
+            <!-- Header -->
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html">Generation</a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Shop</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Shop</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </nav>
+            </header>
+            <!-- Sign Up Form -->
+        <section class="content">
+            <div class="cart-container">
+                <h1>Shopping Cart</h1>
+                
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+        
+                <div class="cart-summary">
+                    <h3>Total: Ksh. <span id="cart-total">0</span></h3>
+                    <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+                </div>
             </div>
-        </header>
-         <!-- Sign Up Form -->
-    <section class="content">
-        <div class="cart-container">
-            <h1>Shopping Cart</h1>
-            
-            <div id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-            </div>
-    
-            <div class="cart-summary">
-                <h3>Total: Ksh. <span id="cart-total">0</span></h3>
-                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
-            </div>
-        </div>
-    </section> 
+        </section> 
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <ul class="quick-links">
-                    <li><a href="index.html">+254 707172370</a></li>
-                </ul>
-                <div class="copyright">&copy Yebente 2024</div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/stanmobitech">Designed by Stanmobitech</a>
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <ul class="quick-links">
+                        <li><a href="index.html" i class="fa fa-phone" style="font-size: 13px;"></i> +254 707172370</a></li>
+                    </ul>
+                    <div class="copyright">&copy Yebente 2024</div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/stanmobitech">Designed by Stanmobitech</a>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
     </div>
     <script src="script.js"></script>
 </body>
