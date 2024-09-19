@@ -128,3 +128,20 @@ if (document.getElementById('checkout-btn')) {
     document.getElementById('checkout-btn').addEventListener('click', makePayment);
 }
 
+// User Database Management 
+const signUpButton=document.getElementById('signUp');
+const logInButton=document.getElementById('logInButton');
+const ressetButton=document.getAnimations('ressetButton');
+
+const signUpForm=document.getElementById('signUpForm');
+const logInForm=document.getElementById('logIn');
+const ressetForm=document.getElementById('resset');
+
+signUpButton.addEventListener('click',function(){
+    logInForm.style.display="none";
+    signUpForm.style.display="block";
+})
+logInButton.addEventListener('click',function(){
+    signUpForm.style.display="none";
+    logInForm.style.display="block"
+})
